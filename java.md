@@ -1,5 +1,11 @@
 # JDK Installation
 
+#### Linux Update
+```
+sudo apt update -y
+sudo apt install software-properties-common -y
+```
+
 #### Java 8
 ```linux
 sudo apt-get install openjdk-8-jdk -y
@@ -13,38 +19,52 @@ sudo apt-get install openjdk-11-jdk -y
 ####  Java 16
 ```linux
 sudo add-apt-repository ppa:linuxuprising/java
-
+```
+```
 sudo apt update
-
+```
+```
 su -
-
+```
+```
 echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu focal main" | tee /etc/apt/sources.list.d/linuxuprising-java.list
-
+```
+```
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 73C3DB2A
-
+```
+```
 apt-get update
-
+```
+```
 exit
-
+```
+```
 sudo apt install oracle-java16-installer --install-recommends
 ```
 
 #### Java 17
 ```linux
 sudo add-apt-repository ppa:linuxuprising/java
-
+```
+```
 sudo apt update
-
+```
+```
 su -
-
+```
+```
 echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu focal main" | tee /etc/apt/sources.list.d/linuxuprising-java.list
-
+```
+```
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 73C3DB2A
-
+```
+```
 apt-get update
-
+```
+```
 exit
-
+```
+```
 sudo apt install oracle-java17-installer --install-recommends
 ```
 
