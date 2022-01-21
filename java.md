@@ -1,5 +1,7 @@
 # JDK Installation
 
+If you want to get help regarding our products or just want to ask something, join our [discord](https://discord.gg/MUCKhgFUCA).
+
 #### Linux Update
 ```
 sudo apt update -y
