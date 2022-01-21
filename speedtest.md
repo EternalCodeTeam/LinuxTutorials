@@ -1,5 +1,6 @@
 # Sprawdzianie łącznośći 
 
+If you want to get help regarding our products or just want to ask something, join our [discord](https://discord.gg/MUCKhgFUCA).
 
 Instalujemy speed test postepując zgodnie z instrukcjami
 
