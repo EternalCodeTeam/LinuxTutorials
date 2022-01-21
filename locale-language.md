@@ -1,5 +1,6 @@
 # Jak Sprawdzić/Zmienić konfigurację języka Ubuntu
 
+If you want to get help regarding our products or just want to ask something, join our [discord](https://discord.gg/MUCKhgFUCA).
 
 Sprawdzamy język
 
