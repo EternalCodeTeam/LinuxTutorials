@@ -4,8 +4,7 @@ If you want to get help regarding our products or just want to ask something, jo
 
 #### Linux Update
 ```
-sudo apt update -y
-sudo apt install software-properties-common -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 #### Java 8
@@ -20,26 +19,20 @@ sudo apt-get install openjdk-11-jdk -y
 
 ####  Java 16
 ```linux
-sudo add-apt-repository ppa:linuxuprising/java
-sudo apt update
-su -
-echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu focal main" | tee /etc/apt/sources.list.d/linuxuprising-java.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 73C3DB2A
-apt-get update
-exit
-sudo apt install oracle-java16-installer --install-recommends
+sudo apt-get install software-properties-common
+wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
+sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
+sudo apt-get update
+sudo apt-get install -y java-16-amazon-corretto-jdk
 ```
 
 #### Java 17
 ```linux
-sudo add-apt-repository ppa:linuxuprising/java
-sudo apt update
-su -
-echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu focal main" | tee /etc/apt/sources.list.d/linuxuprising-java.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 73C3DB2A
-apt-get update
-exit
-sudo apt install oracle-java17-installer --install-recommends
+sudo apt-get install software-properties-common
+wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
+sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
+sudo apt-get update
+sudo apt-get install -y java-17-amazon-corretto-jdk
 ```
 
 #### Check the java version 
@@ -52,44 +45,36 @@ java -version
 sudo update-alternatives --config java
 ```
 
-# Uninstalling all Java version from server
+# Uninstalling all Java version
 ```linux
 sudo apt purge java-common -y
 sudo apt autoremove -y
 ```
 
+# RPM-Based
 
-# Custom Java distributions!
-
-#### Amazon Corretto
+#### DFN
 ```linux
-sudo apt update -y
-sudo apt install software-properties-common -y
-wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
-sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
+sudo rpm --import https://yum.corretto.aws/corretto.key
+sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+sudo dnf -y install java-17-amazon-corretto-devel
 ```
 
-#### Amazon Corretto 8
-```linux
-sudo apt install java-8-amazon-corretto-jdk -y
+#### zypper
+```
+sudo zypper addrepo https://yum.corretto.aws/corretto.repo
+sudo zypper refresh
+sudo zypper install java-17-amazon-corretto-devel
 ```
 
-#### Amazon Corretto 11
-```linux
-sudo apt install java-11-amazon-corretto-jdk -y
+#### Yum
+```
+sudo rpm --import https://yum.corretto.aws/corretto.key
+sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+sudo yum -y install java-17-amazon-corretto-devel
 ```
 
-#### Amazon Corretto 16
-```linux
-sudo apt install java-16-amazon-corretto-jdk -y
+#### Arch linux
 ```
-
-#### Amazon Corretto 17
-```linux
-sudo apt install java-17-amazon-corretto-jdk -y
-```
-
-#### Amazon Corretton Check the java version 
-```linux
-java -version
+sudo pacman -Syu jdk-openjdk
 ```
