@@ -7,6 +7,11 @@ If you want to get help regarding our products or just want to ask something, jo
 sudo apt update && sudo apt upgrade -y
 ```
 
+#### Add the additionals packets
+```
+sudo apt-get install software-properties-common
+```
+
 #### Java 8
 ```linux
 sudo apt-get install openjdk-8-jdk -y
@@ -19,7 +24,6 @@ sudo apt-get install openjdk-11-jdk -y
 
 ####  Java 16
 ```linux
-sudo apt-get install software-properties-common
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
 sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
 sudo apt-get update
@@ -28,7 +32,6 @@ sudo apt-get install -y java-16-amazon-corretto-jdk
 
 #### Java 17
 ```linux
-sudo apt-get install software-properties-common
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
 sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
 sudo apt-get update
