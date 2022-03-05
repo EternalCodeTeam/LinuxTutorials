@@ -130,6 +130,6 @@ SELECT user, host FROM mysql.user;
 
 #### Delete MySQL user
 ```mysql
-DROP USER 'database_user@'localhost';
+DROP USER 'database_user'@'localhost';
 ```
 
