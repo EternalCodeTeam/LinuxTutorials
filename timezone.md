@@ -1,13 +1,13 @@
-# Ustawianie strefy czasowej
+# Time zone
 
 If you want to get help regarding our products or just want to ask something, join our [discord](https://discord.gg/MUCKhgFUCA).
 
-Ustawiamy strefe czasową w przypadku polski będzie to Europe/Warsaw
+We set the time zone
 ```
 timedatectl set-timezone Europe/Warsaw
 ```
 
-Sprawdzamy godzine oraz date
+Check the date and time
 
 ```
 date
