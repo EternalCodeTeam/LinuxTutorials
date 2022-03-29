@@ -1,20 +1,20 @@
-# Monitorowanie przepustowości 
+# nLoad network monitoring 
 
 If you want to get help regarding our products or just want to ask something, join our [discord](https://discord.gg/MUCKhgFUCA).
 
-Aktualizujemy linuxa
+Update
 
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
-Instalujemy nLoad
+Install nload
 
-```java
+```
 sudo apt-get install nload -y
 ```
 
-Następnie włączamy monitor
-```java
+Open monitor 
+```
 nload
 ```
